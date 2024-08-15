@@ -1,0 +1,29 @@
+mainmenu "NPC Configuration Menu"
+
+config TRACE
+	bool "Enable tracer"
+	default n
+
+config ITRACE
+	depends on TRACE
+	bool "instruction tracer"
+	default n
+
+config FTRACE
+	depends on TRACE
+	bool "function tracer"
+	default n
+
+config MTRACE
+	depends on TRACE
+	bool "memory tracer"
+	default n
+
+config DIFFTEST
+	bool "Difftest"
+	default n
+	help
+    	Enable differential testing with a reference design.
+    	Note that this will significantly reduce the performance of NEMU.
+
+
